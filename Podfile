@@ -9,10 +9,10 @@ target 'Survey' do
     pod 'SwiftKeychainWrapper', '~> 3.4'
     
    # For Network Api Calls
-    pod 'Alamofire'
+    pod 'Alamofire', '~> 4.9.1'
 
     #For Image Loading
-    pod 'AlamofireImage'
+    pod 'AlamofireImage', '~> 3.6.0'
     
   # Pods for Survey
 

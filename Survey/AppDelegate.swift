@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  Survey
 //
-//  Created by Aakash Kumbhar on 20/06/20.
+//  Created by Palvi on 20/06/20.
 //  Copyright © 2020 Palvi. All rights reserved.
 //
 
@@ -15,6 +15,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        if TokenKeychainWrapper().getToken() == nil
+        {
+            TokenKeychainWrapper().set(token: accessToken)
+        }
+        
         return true
     }
 

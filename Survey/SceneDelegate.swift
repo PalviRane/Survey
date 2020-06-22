@@ -2,7 +2,7 @@
 //  SceneDelegate.swift
 //  Survey
 //
-//  Created by Aakash Kumbhar on 20/06/20.
+//  Created by Palvi on 20/06/20.
 //  Copyright © 2020 Palvi. All rights reserved.
 //
 

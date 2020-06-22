@@ -2,15 +2,17 @@
 //  SurveyViewController.swift
 //  Survey
 //
-//  Created by Aakash Kumbhar on 22/06/20.
+//  Created by Palvi on 22/06/20.
 //  Copyright © 2020 Palvi. All rights reserved.
 //
 
 import UIKit
 
-class SurveyViewController: UIViewController {
-
-    override func viewDidLoad() {
+class SurveyViewController: UIViewController
+{
+    
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.

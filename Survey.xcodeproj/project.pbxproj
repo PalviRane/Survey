@@ -19,6 +19,11 @@
 		E8422E2124A099D4006E49DB /* Survey.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8422E2024A099D4006E49DB /* Survey.storyboard */; };
 		E8422E2B24A09DE3006E49DB /* SurveyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8422E2A24A09DE3006E49DB /* SurveyViewController.swift */; };
 		E8422E2D24A09E06006E49DB /* SurveyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8422E2C24A09E06006E49DB /* SurveyViewModel.swift */; };
+		E8422E3024A0B242006E49DB /* WebserviceHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8422E2F24A0B242006E49DB /* WebserviceHandler.swift */; };
+		E8422E3224A0C424006E49DB /* TokenKeychainWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8422E3124A0C424006E49DB /* TokenKeychainWrapper.swift */; };
+		E8422E3424A0C6A1006E49DB /* StringConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8422E3324A0C6A1006E49DB /* StringConstants.swift */; };
+		E8422E3624A0DA0C006E49DB /* WebServiceUrls.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8422E3524A0DA0C006E49DB /* WebServiceUrls.swift */; };
+		E8422E3824A0DBF9006E49DB /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8422E3724A0DBF9006E49DB /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +68,11 @@
 		E8422E2024A099D4006E49DB /* Survey.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Survey.storyboard; sourceTree = "<group>"; };
 		E8422E2A24A09DE3006E49DB /* SurveyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyViewController.swift; sourceTree = "<group>"; };
 		E8422E2C24A09E06006E49DB /* SurveyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyViewModel.swift; sourceTree = "<group>"; };
+		E8422E2F24A0B242006E49DB /* WebserviceHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebserviceHandler.swift; sourceTree = "<group>"; };
+		E8422E3124A0C424006E49DB /* TokenKeychainWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenKeychainWrapper.swift; sourceTree = "<group>"; };
+		E8422E3324A0C6A1006E49DB /* StringConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringConstants.swift; sourceTree = "<group>"; };
+		E8422E3524A0DA0C006E49DB /* WebServiceUrls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServiceUrls.swift; sourceTree = "<group>"; };
+		E8422E3724A0DBF9006E49DB /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,7 +144,7 @@
 				E8422DF0249E2EB3006E49DB /* AppDelegate.swift */,
 				E8422DF2249E2EB3006E49DB /* SceneDelegate.swift */,
 				E8422E2224A099E9006E49DB /* SurveyModule */,
-				E8422E2E24A0A73F006E49DB /* Libraries */,
+				E8422E2E24A0A73F006E49DB /* CommanFiles */,
 				E8422DF9249E2EB8006E49DB /* Assets.xcassets */,
 				E8422DFB249E2EB8006E49DB /* LaunchScreen.storyboard */,
 				E8422DFE249E2EB8006E49DB /* Info.plist */,
@@ -210,11 +220,16 @@
 			path = Storyboard;
 			sourceTree = "<group>";
 		};
-		E8422E2E24A0A73F006E49DB /* Libraries */ = {
+		E8422E2E24A0A73F006E49DB /* CommanFiles */ = {
 			isa = PBXGroup;
 			children = (
+				E8422E2F24A0B242006E49DB /* WebserviceHandler.swift */,
+				E8422E3124A0C424006E49DB /* TokenKeychainWrapper.swift */,
+				E8422E3324A0C6A1006E49DB /* StringConstants.swift */,
+				E8422E3524A0DA0C006E49DB /* WebServiceUrls.swift */,
+				E8422E3724A0DBF9006E49DB /* NetworkManager.swift */,
 			);
-			path = Libraries;
+			path = CommanFiles;
 			sourceTree = "<group>";
 		};
 		FAD2A4681685F3A10F14626B /* Frameworks */ = {
@@ -466,9 +481,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8422E3824A0DBF9006E49DB /* NetworkManager.swift in Sources */,
 				E8422DF1249E2EB3006E49DB /* AppDelegate.swift in Sources */,
 				E8422E2B24A09DE3006E49DB /* SurveyViewController.swift in Sources */,
+				E8422E3224A0C424006E49DB /* TokenKeychainWrapper.swift in Sources */,
+				E8422E3424A0C6A1006E49DB /* StringConstants.swift in Sources */,
+				E8422E3624A0DA0C006E49DB /* WebServiceUrls.swift in Sources */,
 				E8422E2D24A09E06006E49DB /* SurveyViewModel.swift in Sources */,
+				E8422E3024A0B242006E49DB /* WebserviceHandler.swift in Sources */,
 				E8422DF3249E2EB3006E49DB /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
