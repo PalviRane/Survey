@@ -13,17 +13,17 @@ class TokenKeychainWrapper
 {
     static let sharedInstance: TokenKeychainWrapper = {return TokenKeychainWrapper()}()
     
-    func set(userName: String)
+    func set(userName: String) -> Bool
     {
         KeychainWrapper.standard.set(userName, forKey: userNameKey)
     }
     
-    func set(password: String)
+    func set(password: String) -> Bool
     {
         KeychainWrapper.standard.set(password, forKey: passwordKey)
     }
     
-    func set(token: String)
+    func set(token: String) -> Bool
     {
         KeychainWrapper.standard.set(token, forKey: tokenKey)
     }

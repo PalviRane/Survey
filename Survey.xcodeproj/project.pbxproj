@@ -24,6 +24,7 @@
 		E8422E3424A0C6A1006E49DB /* StringConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8422E3324A0C6A1006E49DB /* StringConstants.swift */; };
 		E8422E3624A0DA0C006E49DB /* WebServiceUrls.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8422E3524A0DA0C006E49DB /* WebServiceUrls.swift */; };
 		E8422E3824A0DBF9006E49DB /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8422E3724A0DBF9006E49DB /* NetworkManager.swift */; };
+		E8422E3A24A0EC3E006E49DB /* AuthenticationTokenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8422E3924A0EC3E006E49DB /* AuthenticationTokenViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,7 @@
 		E8422E3324A0C6A1006E49DB /* StringConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringConstants.swift; sourceTree = "<group>"; };
 		E8422E3524A0DA0C006E49DB /* WebServiceUrls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServiceUrls.swift; sourceTree = "<group>"; };
 		E8422E3724A0DBF9006E49DB /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		E8422E3924A0EC3E006E49DB /* AuthenticationTokenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationTokenViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -228,6 +230,7 @@
 				E8422E3324A0C6A1006E49DB /* StringConstants.swift */,
 				E8422E3524A0DA0C006E49DB /* WebServiceUrls.swift */,
 				E8422E3724A0DBF9006E49DB /* NetworkManager.swift */,
+				E8422E3924A0EC3E006E49DB /* AuthenticationTokenViewModel.swift */,
 			);
 			path = CommanFiles;
 			sourceTree = "<group>";
@@ -489,6 +492,7 @@
 				E8422E3624A0DA0C006E49DB /* WebServiceUrls.swift in Sources */,
 				E8422E2D24A09E06006E49DB /* SurveyViewModel.swift in Sources */,
 				E8422E3024A0B242006E49DB /* WebserviceHandler.swift in Sources */,
+				E8422E3A24A0EC3E006E49DB /* AuthenticationTokenViewModel.swift in Sources */,
 				E8422DF3249E2EB3006E49DB /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
