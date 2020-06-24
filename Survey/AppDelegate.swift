@@ -13,15 +13,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool
+    {
         // Override point for customization after application launch.
-        
-        if TokenKeychainWrapper().getToken() == nil
-        {
-            TokenKeychainWrapper().set(token: accessToken)
-        }
+        setupUniversalNavigationBarColor()
         
         return true
+    }
+    
+    func setupUniversalNavigationBarColor()
+    {
+        //To change Navigation Bar Background Color
+        UINavigationBar.appearance().barTintColor = #colorLiteral(red: 0.07450980392, green: 0.1019607843, blue: 0.1843137255, alpha: 1)
+        
+        //To change Navigation Item Color
+        UINavigationBar.appearance().tintColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        
+        //To change Navigation transparency
+        UINavigationBar.appearance().isTranslucent = false
+        
+        //To change Navigation Bar Title Color
+        UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
     }
 
     // MARK: UISceneSession Lifecycle

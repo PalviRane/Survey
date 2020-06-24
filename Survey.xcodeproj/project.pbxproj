@@ -25,6 +25,8 @@
 		E8422E3624A0DA0C006E49DB /* WebServiceUrls.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8422E3524A0DA0C006E49DB /* WebServiceUrls.swift */; };
 		E8422E3824A0DBF9006E49DB /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8422E3724A0DBF9006E49DB /* NetworkManager.swift */; };
 		E8422E3A24A0EC3E006E49DB /* AuthenticationTokenViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8422E3924A0EC3E006E49DB /* AuthenticationTokenViewModel.swift */; };
+		E8422E3C24A2363D006E49DB /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8422E3B24A2363D006E49DB /* BaseViewController.swift */; };
+		E8422E4124A3256E006E49DB /* AuthenticationTokenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8422E4024A3256E006E49DB /* AuthenticationTokenModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +77,8 @@
 		E8422E3524A0DA0C006E49DB /* WebServiceUrls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServiceUrls.swift; sourceTree = "<group>"; };
 		E8422E3724A0DBF9006E49DB /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		E8422E3924A0EC3E006E49DB /* AuthenticationTokenViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationTokenViewModel.swift; sourceTree = "<group>"; };
+		E8422E3B24A2363D006E49DB /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		E8422E4024A3256E006E49DB /* AuthenticationTokenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationTokenModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -225,14 +229,24 @@
 		E8422E2E24A0A73F006E49DB /* CommanFiles */ = {
 			isa = PBXGroup;
 			children = (
+				E8422E3F24A32541006E49DB /* AuthenticationToken */,
 				E8422E2F24A0B242006E49DB /* WebserviceHandler.swift */,
 				E8422E3124A0C424006E49DB /* TokenKeychainWrapper.swift */,
 				E8422E3324A0C6A1006E49DB /* StringConstants.swift */,
 				E8422E3524A0DA0C006E49DB /* WebServiceUrls.swift */,
 				E8422E3724A0DBF9006E49DB /* NetworkManager.swift */,
-				E8422E3924A0EC3E006E49DB /* AuthenticationTokenViewModel.swift */,
+				E8422E3B24A2363D006E49DB /* BaseViewController.swift */,
 			);
 			path = CommanFiles;
+			sourceTree = "<group>";
+		};
+		E8422E3F24A32541006E49DB /* AuthenticationToken */ = {
+			isa = PBXGroup;
+			children = (
+				E8422E3924A0EC3E006E49DB /* AuthenticationTokenViewModel.swift */,
+				E8422E4024A3256E006E49DB /* AuthenticationTokenModel.swift */,
+			);
+			path = AuthenticationToken;
 			sourceTree = "<group>";
 		};
 		FAD2A4681685F3A10F14626B /* Frameworks */ = {
@@ -486,6 +500,8 @@
 			files = (
 				E8422E3824A0DBF9006E49DB /* NetworkManager.swift in Sources */,
 				E8422DF1249E2EB3006E49DB /* AppDelegate.swift in Sources */,
+				E8422E3C24A2363D006E49DB /* BaseViewController.swift in Sources */,
+				E8422E4124A3256E006E49DB /* AuthenticationTokenModel.swift in Sources */,
 				E8422E2B24A09DE3006E49DB /* SurveyViewController.swift in Sources */,
 				E8422E3224A0C424006E49DB /* TokenKeychainWrapper.swift in Sources */,
 				E8422E3424A0C6A1006E49DB /* StringConstants.swift in Sources */,

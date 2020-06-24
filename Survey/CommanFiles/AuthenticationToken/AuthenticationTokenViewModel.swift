@@ -73,11 +73,3 @@ class AuthenticationTokenViewModel
     }
 }
 
-struct AuthenticationTokenModel: Codable
-{
-    let access_token:String?
-    let token_type: String?
-    let expires_in: Int?
-    let created_at: UInt64?
-}
-
