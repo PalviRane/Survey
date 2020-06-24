@@ -15,10 +15,36 @@
                     <view key="view" contentMode="scaleToFill" id="LqG-xy-OdE">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="5lN-ka-EK4">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="Ji5-Si-yQu">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                                <connections>
+                                    <outlet property="dataSource" destination="2dD-mp-i3O" id="lRX-r0-Lys"/>
+                                    <outlet property="delegate" destination="2dD-mp-i3O" id="zi0-po-py1"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.074509803920000006" green="0.1019607843" blue="0.1843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="5lN-ka-EK4" firstAttribute="leading" secondItem="d2s-XC-ecs" secondAttribute="leading" id="Fg4-9o-8Wa"/>
+                            <constraint firstItem="5lN-ka-EK4" firstAttribute="trailing" secondItem="d2s-XC-ecs" secondAttribute="trailing" id="Krx-65-Y4D"/>
+                            <constraint firstItem="5lN-ka-EK4" firstAttribute="top" secondItem="d2s-XC-ecs" secondAttribute="top" id="Tsv-Vx-fUn"/>
+                            <constraint firstItem="5lN-ka-EK4" firstAttribute="bottom" secondItem="d2s-XC-ecs" secondAttribute="bottom" id="f1V-Qp-fsM"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="d2s-XC-ecs"/>
                     </view>
                     <navigationItem key="navigationItem" id="zA4-nR-kgm"/>
+                    <connections>
+                        <outlet property="surveyCollectionView" destination="5lN-ka-EK4" id="jZ6-MN-RKN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yT6-AD-qF7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

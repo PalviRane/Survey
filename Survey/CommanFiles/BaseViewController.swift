@@ -50,7 +50,7 @@ class BaseViewController: UIViewController
     
     func setupNavigationBar(withTitle titleString: String)
     {
-        self.navigationItem.title = "Survey"
+        self.navigationItem.title = titleString
         navigationController?.navigationBar.barStyle = .black
     }
 }

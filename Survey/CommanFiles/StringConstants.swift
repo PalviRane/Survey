@@ -17,3 +17,5 @@ let userNameString = "carlos@nimbl3.com"
 let passwordString = "antikera"
 let grantTypeString = "password"
 let accessToken = "b4ff3bc925595f9668f93afca3a1677e07a9355344a803cfe78e7d6a38119cf3"
+
+let surveyNavigationTitle = "Surveys"
