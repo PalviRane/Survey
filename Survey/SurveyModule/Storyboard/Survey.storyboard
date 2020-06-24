@@ -17,8 +17,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="5lN-ka-EK4">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <color key="backgroundColor" red="0.074509803920000006" green="0.1019607843" blue="0.1843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="Ji5-Si-yQu">
                                     <size key="itemSize" width="128" height="128"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -31,13 +31,35 @@
                                     <outlet property="delegate" destination="2dD-mp-i3O" id="zi0-po-py1"/>
                                 </connections>
                             </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IOc-Bx-ALH">
+                                <rect key="frame" x="82" y="647" width="250" height="50"/>
+                                <color key="backgroundColor" red="0.78431372549019607" green="0.13725490196078433" blue="0.20000000000000001" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="ZJg-7q-WPw"/>
+                                    <constraint firstAttribute="height" constant="50" id="nf0-VJ-R0u"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Take the survey">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="takeSurveyButtonAction:" destination="2dD-mp-i3O" eventType="touchUpInside" id="DR0-3z-2Dl"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.074509803920000006" green="0.1019607843" blue="0.1843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="5lN-ka-EK4" firstAttribute="leading" secondItem="d2s-XC-ecs" secondAttribute="leading" id="Fg4-9o-8Wa"/>
                             <constraint firstItem="5lN-ka-EK4" firstAttribute="trailing" secondItem="d2s-XC-ecs" secondAttribute="trailing" id="Krx-65-Y4D"/>
                             <constraint firstItem="5lN-ka-EK4" firstAttribute="top" secondItem="d2s-XC-ecs" secondAttribute="top" id="Tsv-Vx-fUn"/>
-                            <constraint firstItem="5lN-ka-EK4" firstAttribute="bottom" secondItem="d2s-XC-ecs" secondAttribute="bottom" id="f1V-Qp-fsM"/>
+                            <constraint firstItem="IOc-Bx-ALH" firstAttribute="centerY" secondItem="LqG-xy-OdE" secondAttribute="centerY" multiplier="1.5" id="Weo-rm-Mhp"/>
+                            <constraint firstItem="5lN-ka-EK4" firstAttribute="bottom" secondItem="LqG-xy-OdE" secondAttribute="bottom" id="f1V-Qp-fsM"/>
+                            <constraint firstItem="IOc-Bx-ALH" firstAttribute="centerX" secondItem="LqG-xy-OdE" secondAttribute="centerX" id="mOT-rc-K6w"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="d2s-XC-ecs"/>
                     </view>
@@ -49,6 +71,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yT6-AD-qF7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="886.95652173913049" y="4.6875"/>
+        </scene>
+        <!--Survey Details View Controller-->
+        <scene sceneID="IGv-nQ-saF">
+            <objects>
+                <viewController storyboardIdentifier="SurveyDetailsViewController" id="DiB-nK-hjp" customClass="SurveyDetailsViewController" customModule="Survey" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Dyq-gM-XzG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="Csv-s0-gK0"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WDQ-Ek-Vd7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1635" y="3"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ab6-kH-G6S">

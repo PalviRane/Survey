@@ -61,6 +61,23 @@ class SurveyViewController: BaseViewController
     {
         showToast(withToastMessage: "Reload Success", dismissAfter: 3.0)
     }
-
+    
+    @IBAction func takeSurveyButtonAction(_ sender: Any)
+    {
+        let visibleRect = CGRect(origin: surveyCollectionView.contentOffset, size: surveyCollectionView.bounds.size)
+        let visiblePoint = CGPoint(x: visibleRect.midX, y: visibleRect.midY)
+        let visibleIndexPath = surveyCollectionView.indexPathForItem(at: visiblePoint)
+        
+        
+        if let surveyDetailsViewController = SurveyDetailsViewController.getSurveyDetailsViewController(withSurveyName: "NEW \(String(describing: visibleIndexPath?.row ?? 0))")
+        {
+            self.navigationController?.pushViewController(surveyDetailsViewController, animated: true)
+        }
+        else
+        {
+            showToast(withToastMessage: "Redirection not possible!!", dismissAfter: 2.0)
+        }
+    }
+    
 }
 

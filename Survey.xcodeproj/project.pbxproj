@@ -31,6 +31,7 @@
 		E8422E4624A333FE006E49DB /* SurveyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8422E4424A333FE006E49DB /* SurveyCollectionViewCell.swift */; };
 		E8422E4724A333FE006E49DB /* SurveyCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E8422E4524A333FE006E49DB /* SurveyCollectionViewCell.xib */; };
 		E8422E4924A3374F006E49DB /* UIView+Customization.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8422E4824A3374F006E49DB /* UIView+Customization.swift */; };
+		E8422E4B24A3418E006E49DB /* SurveyDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8422E4A24A3418E006E49DB /* SurveyDetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +88,7 @@
 		E8422E4424A333FE006E49DB /* SurveyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyCollectionViewCell.swift; sourceTree = "<group>"; };
 		E8422E4524A333FE006E49DB /* SurveyCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SurveyCollectionViewCell.xib; sourceTree = "<group>"; };
 		E8422E4824A3374F006E49DB /* UIView+Customization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Customization.swift"; sourceTree = "<group>"; };
+		E8422E4A24A3418E006E49DB /* SurveyDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyDetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -225,6 +227,7 @@
 			children = (
 				E8422E2A24A09DE3006E49DB /* SurveyViewController.swift */,
 				E8422E4224A332F3006E49DB /* SurveyViewController+CollectionView.swift */,
+				E8422E4A24A3418E006E49DB /* SurveyDetailsViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -524,6 +527,7 @@
 				E8422E4924A3374F006E49DB /* UIView+Customization.swift in Sources */,
 				E8422E4324A332F3006E49DB /* SurveyViewController+CollectionView.swift in Sources */,
 				E8422E3024A0B242006E49DB /* WebserviceHandler.swift in Sources */,
+				E8422E4B24A3418E006E49DB /* SurveyDetailsViewController.swift in Sources */,
 				E8422E3A24A0EC3E006E49DB /* AuthenticationTokenViewModel.swift in Sources */,
 				E8422DF3249E2EB3006E49DB /* SceneDelegate.swift in Sources */,
 			);
