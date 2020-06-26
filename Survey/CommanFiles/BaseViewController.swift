@@ -23,7 +23,16 @@ class BaseViewController: UIViewController
     {
         let alert = UIAlertController(title: nil, message: message, preferredStyle: .actionSheet)
         
-        self.present(alert, animated: true)
+        if presentedViewController == nil
+        {
+             self.present(alert, animated: true, completion: nil)
+        }
+        else
+        {
+            self.dismiss(animated: false) { () -> Void in
+                   self.present(alert, animated: true, completion: nil)
+              }
+        }
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + seconds)
         {
             alert.dismiss(animated: true)
@@ -40,7 +49,16 @@ class BaseViewController: UIViewController
         loadingIndicator.startAnimating();
         
         loadingAlertView.view.addSubview(loadingIndicator)
-        present(loadingAlertView, animated: true, completion: nil)
+        if presentedViewController == nil
+        {
+             self.present(loadingAlertView, animated: true, completion: nil)
+        }
+        else
+        {
+            self.dismiss(animated: false) { () -> Void in
+                self.present(self.loadingAlertView, animated: true, completion: nil)
+              }
+        }
     }
     
     func dismissLoadingView()

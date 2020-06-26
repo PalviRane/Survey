@@ -11,49 +11,52 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="SurveyCollectionViewCell" customModule="Survey" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="338" height="469"/>
+            <rect key="frame" x="0.0" y="0.0" width="433" height="827"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="338" height="469"/>
+                <rect key="frame" x="0.0" y="0.0" width="433" height="827"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Survey Name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fBa-5a-S3c">
-                        <rect key="frame" x="42.5" y="106" width="253.5" height="23"/>
-                        <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0md-HP-j1i">
+                        <rect key="frame" x="0.0" y="0.0" width="433" height="827"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fBa-5a-S3c">
+                        <rect key="frame" x="54" y="124" width="325" height="0.0"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
-                                <color key="value" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </userDefinedRuntimeAttribute>
                             <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
-                                <real key="value" value="0.20000000000000001"/>
+                                <real key="value" value="0.5"/>
                             </userDefinedRuntimeAttribute>
                             <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
-                                <real key="value" value="2"/>
+                                <real key="value" value="4"/>
                             </userDefinedRuntimeAttribute>
                             <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
                                 <size key="value" width="0.0" height="0.0"/>
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pNf-ZY-i3R">
-                        <rect key="frame" x="25.5" y="144" width="287" height="36"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pNf-ZY-i3R">
+                        <rect key="frame" x="32.5" y="139" width="368" height="0.0"/>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
-                                <real key="value" value="2"/>
+                                <real key="value" value="3"/>
                             </userDefinedRuntimeAttribute>
                             <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
                                 <size key="value" width="0.0" height="0.0"/>
                             </userDefinedRuntimeAttribute>
                             <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
-                                <color key="value" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </userDefinedRuntimeAttribute>
                             <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
-                                <real key="value" value="0.20000000000000001"/>
+                                <real key="value" value="0.80000000000000004"/>
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </label>
@@ -61,16 +64,27 @@
             </view>
             <color key="backgroundColor" systemColor="systemGray5Color" red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstAttribute="trailing" secondItem="0md-HP-j1i" secondAttribute="trailing" id="3C4-YU-fsr"/>
+                <constraint firstItem="0md-HP-j1i" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="BQW-Pu-SzU"/>
                 <constraint firstItem="pNf-ZY-i3R" firstAttribute="centerX" secondItem="fBa-5a-S3c" secondAttribute="centerX" id="GTC-Ca-K2D"/>
                 <constraint firstItem="fBa-5a-S3c" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="POM-0p-QqG"/>
                 <constraint firstItem="fBa-5a-S3c" firstAttribute="width" secondItem="gTV-IL-0wX" secondAttribute="width" multiplier="0.75" id="VjZ-5L-R33"/>
-                <constraint firstItem="fBa-5a-S3c" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" multiplier="0.5" id="YgX-LZ-xaO"/>
+                <constraint firstItem="0md-HP-j1i" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="YYo-ua-HIo"/>
+                <constraint firstItem="fBa-5a-S3c" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" multiplier="0.3" id="YgX-LZ-xaO"/>
                 <constraint firstItem="pNf-ZY-i3R" firstAttribute="top" secondItem="fBa-5a-S3c" secondAttribute="bottom" constant="15" id="fhI-Zs-WR4"/>
+                <constraint firstItem="0md-HP-j1i" firstAttribute="width" secondItem="gTV-IL-0wX" secondAttribute="width" id="hhl-gd-FJD"/>
+                <constraint firstItem="0md-HP-j1i" firstAttribute="height" secondItem="gTV-IL-0wX" secondAttribute="height" id="l8K-zJ-gQA"/>
                 <constraint firstItem="pNf-ZY-i3R" firstAttribute="width" secondItem="gTV-IL-0wX" secondAttribute="width" multiplier="0.85" id="oAu-CM-7gU"/>
+                <constraint firstAttribute="bottom" secondItem="0md-HP-j1i" secondAttribute="bottom" id="zhi-gY-U79"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
-            <size key="customSize" width="338" height="469"/>
-            <point key="canvasLocation" x="146.37681159420291" y="120.87053571428571"/>
+            <size key="customSize" width="433" height="827"/>
+            <connections>
+                <outlet property="surveyDescriptionLabel" destination="pNf-ZY-i3R" id="uVd-21-FeA"/>
+                <outlet property="surveyImageView" destination="0md-HP-j1i" id="nVB-bN-XYh"/>
+                <outlet property="surveyNameLabel" destination="fBa-5a-S3c" id="UPY-VT-mxR"/>
+            </connections>
+            <point key="canvasLocation" x="215.21739130434784" y="240.73660714285714"/>
         </collectionViewCell>
     </objects>
 </document>

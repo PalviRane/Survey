@@ -10,7 +10,7 @@ import UIKit
 
 class SurveyDetailsViewController: BaseViewController
 {
-    var surveyName = "Survey Name"
+    var currentSurvey: SurveyModel?
     static let storyboardIdentifier = "SurveyDetailsViewController"
 
     override func viewDidLoad()
@@ -18,20 +18,27 @@ class SurveyDetailsViewController: BaseViewController
         super.viewDidLoad()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
+    override func viewWillAppear(_ animated: Bool)
+    {
         super.viewWillAppear(animated)
         
-        setupNavigationBar(withTitle: surveyName)
+        if let survey = currentSurvey, let surveyTitle = survey.title
+        {
+            setupNavigationBar(withTitle: surveyTitle)
+        }
     }
     
+    
     //MARK: Initialization for redirection
-    static func  getSurveyDetailsViewController(withSurveyName currentSurveyName:String) -> SurveyDetailsViewController?
+    
+    static func  getSurveyDetailsViewController(withSurvey survey: SurveyModel) -> SurveyDetailsViewController?
     {
-        let storyBoard = UIStoryboard(name: "Survey", bundle: nil)
+        //Getting SurveyDetailsViewController instance.
+        let storyBoard = UIStoryboard(name: SurveyStoryboard, bundle: nil)
         
         guard let surveyDetailsViewController = storyBoard.instantiateViewController(withIdentifier: SurveyDetailsViewController.storyboardIdentifier) as? SurveyDetailsViewController else { return  nil}
         
-        surveyDetailsViewController.surveyName = currentSurveyName
+        surveyDetailsViewController.currentSurvey = survey
         
         return surveyDetailsViewController
     }

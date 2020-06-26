@@ -17,8 +17,9 @@ class WebserviceHandler
         var headers = HTTPHeaders.init()
         if let token = TokenKeychainWrapper().getToken()
         {
-            headers["Authorization"] = "34054f8e54e09016c2df8fbb6ee44c944079dd965d9c4ec24c1aae35f97d09ee"//token
+            headers["Authorization"] = "Bearer \(token)"
         }
+        
         return headers
     }
     

@@ -10,8 +10,16 @@ import Foundation
 
 struct AuthenticationTokenModel: Codable
 {
-    let access_token:String?
-    let token_type: String?
-    let expires_in: Int?
-    let created_at: UInt64?
+    let accessToken:String?
+    let tokenType: String?
+    let expiresIn: Int?
+    let createdAt: UInt64?
+    
+    private enum CodingKeys : String, CodingKey
+    {
+        case accessToken = "access_token"
+        case tokenType = "token_type"
+        case expiresIn = "expires_in"
+        case createdAt = "created_at"
+    }
 }

@@ -16,9 +16,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Survey" translatesAutoresizingMaskIntoConstraints="NO" id="brD-Nd-ve1">
+                                <rect key="frame" x="122" y="139" width="170.5" height="170.5"/>
+                            </imageView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="5lN-ka-EK4">
                                 <rect key="frame" x="0.0" y="88" width="414" height="808"/>
-                                <color key="backgroundColor" red="0.074509803920000006" green="0.1019607843" blue="0.1843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="Ji5-Si-yQu">
                                     <size key="itemSize" width="128" height="128"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -33,7 +36,7 @@
                             </collectionView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IOc-Bx-ALH">
                                 <rect key="frame" x="82" y="647" width="250" height="50"/>
-                                <color key="backgroundColor" red="0.78431372549019607" green="0.13725490196078433" blue="0.20000000000000001" alpha="0.84705882352941175" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.78431372549019607" green="0.13725490196078433" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="250" id="ZJg-7q-WPw"/>
                                     <constraint firstAttribute="height" constant="50" id="nf0-VJ-R0u"/>
@@ -51,21 +54,46 @@
                                     <action selector="takeSurveyButtonAction:" destination="2dD-mp-i3O" eventType="touchUpInside" id="DR0-3z-2Dl"/>
                                 </connections>
                             </button>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="1BL-Mf-koj">
+                                <rect key="frame" x="374" y="108" width="20" height="734"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="YsR-x9-90h"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="xsh-Jj-8nX">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                                <connections>
+                                    <outlet property="dataSource" destination="2dD-mp-i3O" id="uMb-0L-gWI"/>
+                                    <outlet property="delegate" destination="2dD-mp-i3O" id="cgx-SU-Pvv"/>
+                                </connections>
+                            </collectionView>
                         </subviews>
-                        <color key="backgroundColor" red="0.074509803920000006" green="0.1019607843" blue="0.1843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="brD-Nd-ve1" firstAttribute="centerY" secondItem="LqG-xy-OdE" secondAttribute="centerY" multiplier="0.5" id="5Vk-cg-hnl"/>
                             <constraint firstItem="5lN-ka-EK4" firstAttribute="leading" secondItem="d2s-XC-ecs" secondAttribute="leading" id="Fg4-9o-8Wa"/>
                             <constraint firstItem="5lN-ka-EK4" firstAttribute="trailing" secondItem="d2s-XC-ecs" secondAttribute="trailing" id="Krx-65-Y4D"/>
+                            <constraint firstItem="d2s-XC-ecs" firstAttribute="trailing" secondItem="1BL-Mf-koj" secondAttribute="trailing" constant="20" id="Pjo-LU-Kg1"/>
                             <constraint firstItem="5lN-ka-EK4" firstAttribute="top" secondItem="d2s-XC-ecs" secondAttribute="top" id="Tsv-Vx-fUn"/>
                             <constraint firstItem="IOc-Bx-ALH" firstAttribute="centerY" secondItem="LqG-xy-OdE" secondAttribute="centerY" multiplier="1.5" id="Weo-rm-Mhp"/>
+                            <constraint firstItem="d2s-XC-ecs" firstAttribute="bottom" secondItem="1BL-Mf-koj" secondAttribute="bottom" constant="20" id="ceW-gp-SdN"/>
                             <constraint firstItem="5lN-ka-EK4" firstAttribute="bottom" secondItem="LqG-xy-OdE" secondAttribute="bottom" id="f1V-Qp-fsM"/>
                             <constraint firstItem="IOc-Bx-ALH" firstAttribute="centerX" secondItem="LqG-xy-OdE" secondAttribute="centerX" id="mOT-rc-K6w"/>
+                            <constraint firstItem="brD-Nd-ve1" firstAttribute="centerX" secondItem="LqG-xy-OdE" secondAttribute="centerX" id="rtt-hh-nbh"/>
+                            <constraint firstItem="1BL-Mf-koj" firstAttribute="top" secondItem="d2s-XC-ecs" secondAttribute="top" constant="20" id="tHA-Bu-3Np"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="d2s-XC-ecs"/>
                     </view>
                     <navigationItem key="navigationItem" id="zA4-nR-kgm"/>
                     <connections>
+                        <outlet property="paginationCollectionView" destination="1BL-Mf-koj" id="lzv-dp-F9y"/>
                         <outlet property="surveyCollectionView" destination="5lN-ka-EK4" id="jZ6-MN-RKN"/>
+                        <outlet property="takeSurveyButton" destination="IOc-Bx-ALH" id="4Ja-Ei-U8K"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yT6-AD-qF7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -106,4 +134,7 @@
             <point key="canvasLocation" x="105.79710144927537" y="4.6875"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Survey" width="170.5" height="170.5"/>
+    </resources>
 </document>

@@ -32,6 +32,9 @@
 		E8422E4724A333FE006E49DB /* SurveyCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E8422E4524A333FE006E49DB /* SurveyCollectionViewCell.xib */; };
 		E8422E4924A3374F006E49DB /* UIView+Customization.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8422E4824A3374F006E49DB /* UIView+Customization.swift */; };
 		E8422E4B24A3418E006E49DB /* SurveyDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8422E4A24A3418E006E49DB /* SurveyDetailsViewController.swift */; };
+		E8422E4D24A34B2F006E49DB /* SurveyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8422E4C24A34B2F006E49DB /* SurveyModel.swift */; };
+		E8A6F38424A38B820032EF1E /* SurveyPaginationCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A6F38224A38B820032EF1E /* SurveyPaginationCollectionViewCell.swift */; };
+		E8A6F38524A38B820032EF1E /* SurveyPaginationCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E8A6F38324A38B820032EF1E /* SurveyPaginationCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +92,9 @@
 		E8422E4524A333FE006E49DB /* SurveyCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SurveyCollectionViewCell.xib; sourceTree = "<group>"; };
 		E8422E4824A3374F006E49DB /* UIView+Customization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Customization.swift"; sourceTree = "<group>"; };
 		E8422E4A24A3418E006E49DB /* SurveyDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyDetailsViewController.swift; sourceTree = "<group>"; };
+		E8422E4C24A34B2F006E49DB /* SurveyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyModel.swift; sourceTree = "<group>"; };
+		E8A6F38224A38B820032EF1E /* SurveyPaginationCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyPaginationCollectionViewCell.swift; sourceTree = "<group>"; };
+		E8A6F38324A38B820032EF1E /* SurveyPaginationCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SurveyPaginationCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -201,6 +207,7 @@
 		E8422E2324A099F5006E49DB /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				E8422E4C24A34B2F006E49DB /* SurveyModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -210,6 +217,8 @@
 			children = (
 				E8422E4424A333FE006E49DB /* SurveyCollectionViewCell.swift */,
 				E8422E4524A333FE006E49DB /* SurveyCollectionViewCell.xib */,
+				E8A6F38224A38B820032EF1E /* SurveyPaginationCollectionViewCell.swift */,
+				E8A6F38324A38B820032EF1E /* SurveyPaginationCollectionViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -384,6 +393,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E8422DFD249E2EB8006E49DB /* LaunchScreen.storyboard in Resources */,
+				E8A6F38524A38B820032EF1E /* SurveyPaginationCollectionViewCell.xib in Resources */,
 				E8422DFA249E2EB8006E49DB /* Assets.xcassets in Resources */,
 				E8422E4724A333FE006E49DB /* SurveyCollectionViewCell.xib in Resources */,
 				E8422E2124A099D4006E49DB /* Survey.storyboard in Resources */,
@@ -514,6 +524,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8422E4D24A34B2F006E49DB /* SurveyModel.swift in Sources */,
 				E8422E3824A0DBF9006E49DB /* NetworkManager.swift in Sources */,
 				E8422DF1249E2EB3006E49DB /* AppDelegate.swift in Sources */,
 				E8422E3C24A2363D006E49DB /* BaseViewController.swift in Sources */,
@@ -525,6 +536,7 @@
 				E8422E3624A0DA0C006E49DB /* WebServiceUrls.swift in Sources */,
 				E8422E2D24A09E06006E49DB /* SurveyViewModel.swift in Sources */,
 				E8422E4924A3374F006E49DB /* UIView+Customization.swift in Sources */,
+				E8A6F38424A38B820032EF1E /* SurveyPaginationCollectionViewCell.swift in Sources */,
 				E8422E4324A332F3006E49DB /* SurveyViewController+CollectionView.swift in Sources */,
 				E8422E3024A0B242006E49DB /* WebserviceHandler.swift in Sources */,
 				E8422E4B24A3418E006E49DB /* SurveyDetailsViewController.swift in Sources */,

@@ -13,11 +13,13 @@ class TokenKeychainWrapper
 {
     static let sharedInstance: TokenKeychainWrapper = {return TokenKeychainWrapper()}()
     
+    //Can be used with login flow
     func set(userName: String) -> Bool
     {
         KeychainWrapper.standard.set(userName, forKey: userNameKey)
     }
     
+    //Can be used with login flow
     func set(password: String) -> Bool
     {
         KeychainWrapper.standard.set(password, forKey: passwordKey)

@@ -8,68 +8,51 @@
 
 import Foundation
 
-protocol AuthenticationTokenDelegate
-{
-    func authenticationTokenGenerationResponse(isSuccess: Bool)
-}
-
-extension AuthenticationTokenDelegate
-{
-    func authenticationTokenGenerationResponse(isSuccess: Bool){}
-}
-
 class AuthenticationTokenViewModel
 {
-    //MARK: Properties
-    var delegate: AuthenticationTokenDelegate?
-    
-    
-    func getAuthenticationToken()
-    {
-        if !NetworkManager.isConnectedToInternet
-        {
-            //Show internet connectivity issue error
-            return
-        }
-        
-        let requestDictionary = [ "grant_type":grantTypeString, "username":"carlos@nimbl3.com", "password":"antikera" ] as Dictionary<String, AnyObject>
+    func getAuthenticationToken(onSuccess: @escaping () -> Void, onFailure: @escaping () -> Void)
+    {        
+        let requestDictionary = [ "grant_type":grantTypeString, "username":userNameString, "password":passwordString ] as Dictionary<String, AnyObject>
         
         let urlString = WebServiceUrls().baseURL + WebServiceUrls().getAuthToken
         
-        WebserviceHandler().makeAPIRequest(url: urlString, methodType: .post, parameter: requestDictionary) { (flag, responseData) in
+        WebserviceHandler().makeAPIRequest(url: urlString, methodType: .post, parameter: requestDictionary) { (success, responseData) in
             DispatchQueue.main.async(execute:
                 {
-                    print(responseData)
-                    print(ERR_SUCCESS)
+                    if success
+                    {
+                        do
+                        {
+                            guard let response = responseData.data else {return}
+                            
+                            let authTokenModel: AuthenticationTokenModel? = try JSONDecoder().decode(AuthenticationTokenModel.self, from: response)
+                            
+                            if let token = authTokenModel, let access_token = token.accessToken
+                            {
+                                let setTokenSuccess = TokenKeychainWrapper().set(token: access_token)
+                                if setTokenSuccess
+                                {
+                                    onSuccess()
+                                }
+                                else
+                                {
+                                    onFailure()
+                                }
+                            }
+                        }
+                        catch let jsonError
+                        {
+                            print(jsonError)
+                            onFailure()
+                        }
+                    }
+                    else
+                    {
+                        onFailure()
+                    }
             })
         }
     }
     
-    func mapToAuthenticationTokenModel(response: Data?, success:Bool, urlResponse: HTTPURLResponse )
-    {
-        if success
-        {
-            do
-            {
-                guard let response = response else {return}
-                let authTokenModel: AuthenticationTokenModel? = try JSONDecoder().decode(AuthenticationTokenModel.self, from: response)
-                
-                if let token = authTokenModel, let access_token = token.access_token
-                {
-                    let setTokenSuccess = TokenKeychainWrapper().set(token: access_token)
-                    delegate?.authenticationTokenGenerationResponse(isSuccess: setTokenSuccess)
-                }
-            }
-            catch let jsonError
-            {
-                print(jsonError)
-                delegate?.authenticationTokenGenerationResponse(isSuccess: false)
-            }
-        }
-        else
-        {
-            delegate?.authenticationTokenGenerationResponse(isSuccess: false)
-        }
-    }
 }
 
